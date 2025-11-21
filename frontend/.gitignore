@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # =====================
 # Logs
 # =====================
+=======
+# Logs
+>>>>>>> 30c8d4fbff36ee2a3d76e5f71359bd628af7c3de
 logs
 *.log
 npm-debug.log*
@@ -9,6 +13,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+<<<<<<< HEAD
 # =====================
 # Node modules & builds
 # =====================
@@ -32,12 +37,24 @@ build/
 .vscode/*
 !.vscode/extensions.json
 .idea/
+=======
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+>>>>>>> 30c8d4fbff36ee2a3d76e5f71359bd628af7c3de
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 # =====================
 # Misc / system files
@@ -45,3 +62,5 @@ build/
 *.bak
 *.tmp
 *.cache
+=======
+>>>>>>> 30c8d4fbff36ee2a3d76e5f71359bd628af7c3de
