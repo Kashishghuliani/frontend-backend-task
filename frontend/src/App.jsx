@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Login from './pages/Login';
@@ -31,7 +30,6 @@ export default function App() {
 
   return (
     <div className={`min-h-screen ${hideHeader ? '' : 'bg-gray-50'}`}>
-      
       {/* Show Header except Login/Register */}
       {!hideHeader && <Header user={user} setUser={setUser} />}
 
@@ -64,40 +62,3 @@ export default function App() {
     </div>
   );
 }
-=======
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
->>>>>>> 30c8d4fbff36ee2a3d76e5f71359bd628af7c3de
