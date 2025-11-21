@@ -1,0 +1,43 @@
+MongoDB connected
+Server running on port 5000
+
+===== AUTH ROUTES =====
+POST /api/auth/register 201 15ms
+Request Body: { "name": "Kashish", "email": "test@example.com", "password": "123456" }
+Response: { "message": "User registered successfully", "user": { "id": "64fa...", "name": "Kashish", "email": "test@example.com" } }
+
+POST /api/auth/login 200 12ms
+Request Body: { "email": "test@example.com", "password": "123456" }
+Response: { "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." }
+
+===== USER ROUTES =====
+GET /api/user/profile 200 10ms
+Headers: { "Authorization": "Bearer <token>" }
+Response: { "id": "64fa...", "name": "Kashish", "email": "test@example.com" }
+
+PUT /api/user/profile 200 14ms
+Headers: { "Authorization": "Bearer <token>" }
+Request Body: { "name": "Kashish Updated", "avatarUrl": "https://example.com/avatar.jpg" }
+Response: { "message": "Profile updated", "user": { "id": "64fa...", "name": "Kashish Updated", "email": "test@example.com", "avatarUrl": "https://example.com/avatar.jpg" } }
+
+===== TASK ROUTES =====
+POST /api/tasks 201 18ms
+Request Body: { "title": "Learn React", "description": "Practice React projects" }
+Response: { "id": "64fa...", "title": "Learn React", "description": "Practice React projects", "completed": false }
+
+GET /api/tasks 200 15ms
+Response: [
+  { "id": "64fa...", "title": "Learn React", "description": "Practice React projects", "completed": false }
+]
+
+GET /api/tasks/:id 200 10ms
+Response: { "id": "64fa...", "title": "Learn React", "description": "Practice React projects", "completed": false }
+
+PUT /api/tasks/:id 200 13ms
+Request Body: { "completed": true }
+Response: { "id": "64fa...", "title": "Learn React", "description": "Practice React projects", "completed": true }
+
+DELETE /api/tasks/:id 200 11ms
+Response: { "message": "Task deleted successfully" }
+
+===== END OF LOGS =====
